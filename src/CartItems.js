@@ -1,10 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import Item from './item'
 
-class CartItems extends Component {
-  render() {
-
-    return (
+const CartItems = (props) => {
+  return (
       <div className="container">
         <h1>Cart Items</h1>
           <div className="list-group">
@@ -15,12 +13,13 @@ class CartItems extends Component {
                 <div className="col-md-2">Quantity</div>
               </div>
             </div>
-              {this.props.list.map(list =>          <Item key= {list.id} product={list.product.name} price={list.product.priceInCents} quantity={list.quantity} />
+              {props.list.map(list =>
+                <Item key= {list.id} product={list.product.name} price={list.product.priceInCents} quantity={list.quantity}
+                />
               )}
           </div>
         </div>
-    );
-  }
+    )
 }
 
-export {CartItems};
+export {CartItems}

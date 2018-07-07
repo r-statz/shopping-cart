@@ -1,16 +1,15 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
-export default class Item extends Component {
-  render() {
+const Item = (props) => {
     return (
       <div className="list-group-item">
         <div className="row">
-          <div className="col-md-8">{this.props.product}</div>
-          <div className="col-md-2">{this.props.price}</div>
-          <div className="col-md-2">{this.props.quantity}</div>
+          <div className="col-md-8">{props.product}</div>
+          <div className="col-md-2">{props.price}</div>
+          <div className="col-md-2">{props.quantity}</div>
         </div>
       </div>
-
-    );
-  }
+    )
 }
+
+export default Item
